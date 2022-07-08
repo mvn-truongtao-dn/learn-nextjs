@@ -5,7 +5,7 @@ import { useEffect } from 'react';
 import { useState } from 'react';
 import { useRouter } from 'next/router';
 import { GetStaticPathsContext } from 'next';
-import { MainLayout } from '@/components/layout';
+import { AdminLayout, MainLayout } from '@/components/layout';
 // const Header = dynamic(() => import('@/components/common/header'), {
 //   ssr: false,
 // });
@@ -54,7 +54,7 @@ export default function AboutPage(props: AboutPageProps) {
     </>
   );
 }
-AboutPage.Layout = MainLayout;
+AboutPage.Layout = AdminLayout;
 
 export async function getStaticProps(context: GetStaticPathsContext) {
   console.log('get static props');
